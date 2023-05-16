@@ -1,0 +1,48 @@
+#NOME{
+    width: 200%;
+}
+
+#EMAIL{
+    width: 200%;
+}
+
+#SENHA{
+    width: 200%;
+}
+#Especialidade{
+    width: 200%;
+}
+#Next{
+    position:fixed ;
+    right: 5%;
+}
+
+#NomePaci{
+    width: 200%;
+}
+
+#calendario{
+    width: 250%;
+    height: 10%;
+}
+
+#EspCalen{
+    width: 50%;
+}
+
+#Medico{
+    width: 50%;
+    position: relative;
+}
+
+#date{
+    width: 50%;
+}
+
+#time{
+    width: 50%;
+}
+
+#Paciente{
+    width: 100%;
+}
