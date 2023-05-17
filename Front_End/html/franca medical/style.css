@@ -46,3 +46,8 @@
 #Paciente{
     width: 100%;
 }
+
+#administrador{
+    border: 1px;
+    border-radius: .5rem;
+}
