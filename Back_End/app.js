@@ -33,7 +33,13 @@ app.use('/users', usersRouter);
 const medicoRouter = require('./routes/medicos')
 app.use('/Medico', medicoRouter)
 
-const administradorRouter = require('./routes/administrador')
+const administradorRouter = require('./routes/administradores')
 app.use('/criarUsuario', administradorRouter)
+
+const pacienteRouter = require('./routes/pacientes')
+app.use('/Paciente', pacienteRouter)
+
+const agendarRouter = require('./routes/agendas')
+app.use('/agendarConsulta', agendarRouter)
 
 module.exports = app;

@@ -9,15 +9,19 @@ const schema = mongoose.Schema({
     type: String,
     required: false
   },
+  celular: {
+    type: String,
+    required: true
+  },
   cpf: {
     type: String,
     required: true
   },
-  endereco: {
-    type: String,
-    required: false
+  datanascimento: {
+    type: Date,
+    required: true
   },
-  especialidade: {
+  endereco: {
     type: String,
     required: true
   }
@@ -30,4 +34,4 @@ const schema = mongoose.Schema({
   3º: nome da collection no banco de dados (convenção: mesmo nome do model, mas com
       letra minúscula e no plural)
 */
-module.exports = mongoose.model('Medico', schema, 'medico')
+module.exports = mongoose.model('Paciente', schema, 'paciente')

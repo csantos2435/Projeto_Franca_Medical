@@ -1,23 +1,19 @@
 const mongoose = require('mongoose')
 
 const schema = mongoose.Schema({
-  nome: {
+  id_paciente: {
     type: String,
     required: true  // Campo obigatório
   },
-  email: {
+  id_medico: {
     type: String,
     required: false
   },
-  cpf: {
-    type: String,
+  data: {
+    type: Date,
     required: true
   },
-  endereco: {
-    type: String,
-    required: false
-  },
-  especialidade: {
+  hora: {
     type: String,
     required: true
   }
@@ -30,4 +26,4 @@ const schema = mongoose.Schema({
   3º: nome da collection no banco de dados (convenção: mesmo nome do model, mas com
       letra minúscula e no plural)
 */
-module.exports = mongoose.model('Medico', schema, 'medico')
+module.exports = mongoose.model('Agendar', schema, 'agendar')
