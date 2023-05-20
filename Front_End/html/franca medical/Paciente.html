@@ -142,12 +142,23 @@
       <ul class="menu-sub">
         <li class="menu-item active">
           <a href="criarUsuario.html" class="menu-link">
-            <div data-i18n="Criar usuário">Criar usuário</div>
+            <div data-i18n="Criar usuário">Administrador</div>
           </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item active">
+          <a href="Medico.html" class="menu-link">
+            <div data-i18n="Criar usuário">Médico</div>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="Paciente.html" class="menu-link">
+            <div data-i18n="Criar usuário">Paciente</div>
+          </a>
+        </li>
+        <li class="menu-item active">
           <a href="agendarConsulta.html" class="menu-link">
-            <div data-i18n="Agendar consulta">Agendar consulta</div>
+            <i class="menu-icon tf-icons bx bx-calendar"></i>
+            <div data-i18n="Calendar">Agendar consulta</div>
           </a>
         </li>
         <li class="menu-item">
@@ -157,8 +168,6 @@
         </li>
       </ul>
     </li>
-
-    
   </ul>
   
   
@@ -302,46 +311,6 @@
       <!-- Personal Details -->
       <div id="personal-details" class="content active dstepper-block fv-plugins-bootstrap5 fv-plugins-framework">
         <div class="row g-3">
-          <div class="col-12">
-            <div class="row">
-              <div class="col-md mb-md-0 mb-2" id="administrador">
-                <div class="form-check custom-option custom-option-icon checked">
-                  <label class="form-check-label custom-option-content" for="customRadioBuilder">
-                    <span class="custom-option-body">
-                        <a href="criarUsuario.html">
-                      <i class="bx bx-building-house"></i>
-                      <span class="custom-option-title">Administrador</span>
-                    </span>
-                </a>
-                  </label>
-                </div>
-              </div>
-              <div class="col-md mb-md-0 mb-2">
-                <div class="form-check custom-option custom-option-icon">
-                  <label class="form-check-label custom-option-content" for="customRadioOwner">
-                    <span class="custom-option-body">
-                        <a href="Medico.html">
-                      <i class="bx bx-plus-medical"></i>
-                      <span class="custom-option-title">Medico</span>
-                    </span>
-                </a>
-                  </label>
-                </div>
-              </div>
-              <div class="col-md mb-md-0 mb-2">
-                <div class="form-check custom-option custom-option-icon">
-                  <label class="form-check-label custom-option-content" for="customRadioBroker">
-                    <span class="custom-option-body">
-                        <a href="Paciente.html">
-                      <i class="bx bx-user"></i>
-                      <span class="custom-option-title">Paciente</span>
-                    </span>
-                </a>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="col-sm-6 fv-plugins-icon-container" id="NomePaci">
             <input type="text" id="plFirstName" name="plFirstName" class="form-control" placeholder="NOME">
           <div class="fv-plugins-message-container invalid-feedback"></div></div>
@@ -359,12 +328,6 @@
           </div>
           <div class="col-sm-6">
             <input type="text" id="plEmail" name="plEmail" class="form-control" placeholder="DATA DE NASCIMENTO">
-          </div>
-          <div class="col-sm-6" id="SENHA">
-            <div class="input-group input-group-merge">
-              <input type="password" id="plPassWord" class="form-control" name="plPassWord" placeholder="SENHA" aria-describedby="passwordToggler">
-              <span id="passwordToggler" class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-            </div>
           </div>
           <div class="col-12 d-flex justify-content-between">
             <button class="btn btn-label-secondary btn-prev" disabled=""> <i class="bx bx-chevron-left bx-sm ms-sm-n2"></i>

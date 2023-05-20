@@ -141,7 +141,17 @@
       <ul class="menu-sub">
         <li class="menu-item active">
           <a href="criarUsuario.html" class="menu-link">
-            <div data-i18n="Criar usuário">Criar usuário</div>
+            <div data-i18n="Criar usuário">Administrador</div>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="Medico.html" class="menu-link">
+            <div data-i18n="Criar usuário">Médico</div>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="Paciente.html" class="menu-link">
+            <div data-i18n="Criar usuário">Paciente</div>
           </a>
         </li>
         <li class="menu-item active">
@@ -157,8 +167,6 @@
         </li>
       </ul>
     </li>
-
-    
   </ul>
   
   
@@ -264,162 +272,83 @@
   </nav>
   
 
-
-<!-- Navbar -->
-
-
-
-
-<nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
   
-
-  
-
-  
-
-      
-      
-      
-
-      
-      
-  <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
-    <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-      <i class="bx bx-menu bx-sm"></i>
-    </a>
-  </div>
-  
-
-  <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-
-    
-   
-    
-
-
-    
-
-    <ul class="navbar-nav flex-row align-items-center ms-auto">
-      
-     
-      <!-- User -->
-      <li class="nav-item navbar-dropdown dropdown-user dropdown">
-        <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-          <div class="avatar avatar-online">
-            <img src="../../assets/img/avatars/21.png" alt class="w-px-40 h-auto rounded-circle">
-          </div>
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li>
-            <a class="dropdown-item" href="pages-account-settings-account.html">
-              <div class="d-flex">
-                <div class="flex-shrink-0 me-3">
-                  <div class="avatar avatar-online">
-                    <img src="../../assets/img/avatars/21.png" alt class="w-px-40 h-auto rounded-circle">
-                  </div>
-                </div>
-                <div class="flex-grow-1">
-                  <span class="fw-semibold d-block">John Doe</span>
-                  <small class="text-muted">Admin</small>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <div class="dropdown-divider"></div>
-          </li>
-          
-          <li>
-            <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
-              <i class="bx bx-power-off me-2"></i>
-              <span class="align-middle">Sair</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <!--/ User -->
-      
-
-    </ul>
-  </div>
-
-  
-  <!-- Search Small Screens -->
-  <div class="navbar-search-wrapper search-input-wrapper  d-none">
-    <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
-    <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
-  </div>
-  
-  
-</nav>
-
-
-
 <!-- / Navbar -->
+      
+
+      <!-- Content wrapper -->
+      <div class="content-wrapper">
+
+        <!-- Content -->
+        
+          <div class="container-xxl flex-grow-1 container-p-y">
+  <!-- /Autosize -->
 
   
 
-  <!-- Content wrapper -->
-  <div class="content-wrapper">
+ 
+  <!-- /Bootstrap Maxlength -->
 
-    <!-- Content -->
-    
-      <div class="container-xxl flex-grow-1 container-p-y">
-    <!-- Calendar Sidebar -->
-    
-      
-    <!-- /Calendar Sidebar -->
-
-     <!-- Input Mask -->
+  <!-- Form Repeater -->
   <div class="col-12">
-    <div class="card mb-4">
+    <div class="card">
       <h5 class="card-header">Agendar consulta</h5>
       <div class="card-body">
-        <div class="row">
-           <!-- Paciente -->
-           <div class="col-xl-4 col-md-6 col-sm-12" id="Paciente">
-            <input type="text" id="prefix-mask" class="form-control prefix-mask" placeholder="Paciente"/>
+        <form class="form-repeater">
+          <div data-repeater-list="group-a">
+            <div data-repeater-item>
+              <div class="row">
+                <!-- Paciente -->
+                <div class="mb-3" id="PACIENTE">
+                 <select id="defaultSelect" class="form-select">
+                   <option>PACIENTE</option>
+                   <option value="1">One</option>
+                   <option value="2">Two</option>
+                   <option value="3">Three</option>
+                 </select>
+               </div>
+               <br>
+               <!--Medico-->
+               <div class="mb-3" id="Medico">
+                 <select id="defaultSelect" class="form-select">
+                   <option>MEDICO</option>
+                   <option value="1">One</option>
+                   <option value="2">Two</option>
+                   <option value="3">Three</option>
+                 </select>
+               </div>
+               <!-- Date -->
+               <div class="col-md-6 col-12 mb-4" id="date">
+                 <label class="form-label" for="form-repeater-1-1">DATA</label>
+                 <input type="date" class="form-control" placeholder="YYYY-MM-DD" id="flatpickr-date" />
+               </div>
+               <!-- Time -->
+               <div class="col-xl-4 col-md-6 col-sm-12 mb-4" id="time">
+                 <label class="form-label" for="form-repeater-1-1">HORÁRIO</label>
+                 <input type="time" id="time-mask" class="form-control time-mask" placeholder="hh:mm:ss" />
+               </div>
+               <div class="col-12 d-flex justify-content-between">
+                 <button class="btn btn-label-secondary btn-prev" disabled=""> <i class="bx bx-chevron-left bx-sm ms-sm-n2"></i>
+                   <span class="align-middle d-sm-inline-block d-none">Cancelar</span>
+                 </button>
+                 <button class="btn btn-primary btn-next" id="Next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">CRIAR</span> <i class="bx bx-chevron-right bx-sm me-sm-n2"></i></button>
+               </div>
+             </div>
+              <hr>
+            </div>
           </div>
-          <br>
-          <br>
-          <!--Medico-->
-          <div class="mb-3" id="Medico">
-            <select id="defaultSelect" class="form-select">
-              <option>Medico</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-          <!--Especialidade-->
-          <div class="mb-3" id="EspCalen">
-            <select id="defaultSelect" class="form-select">
-              <option>Especialidade</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-          <br>
-          <!-- Date -->
-          <div class="col-md-6 col-12 mb-4" id="date">
-            <input type="date" class="form-control" placeholder="YYYY-MM-DD" id="flatpickr-date" />
-          </div>
-          <!-- Time -->
-          <div class="col-xl-4 col-md-6 col-sm-12 mb-4" id="time">
-            <input type="time" id="time-mask" class="form-control time-mask" placeholder="hh:mm:ss" />
-          </div>
-          <div class="col-12 d-flex justify-content-between">
-            <button class="btn btn-label-secondary btn-prev" disabled=""> <i class="bx bx-chevron-left bx-sm ms-sm-n2"></i>
-              <span class="align-middle d-sm-inline-block d-none">Cancelar</span>
+          <div class="mb-0">
+            <button class="btn btn-primary" data-repeater-create>
+              <i class="bx bx-plus me-1"></i>
+              <span class="align-middle">Add</span>
             </button>
-            <button class="btn btn-primary btn-next" id="Next"> <span class="align-middle d-sm-inline-block d-none me-sm-1">CRIAR</span> <i class="bx bx-chevron-right bx-sm me-sm-n2"></i></button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
-  <!-- /Input Mask -->
+  <!-- /Form Repeater -->
+
 </div>
 
             
@@ -451,7 +380,6 @@
 
   
   
-  
 
   
 
@@ -470,20 +398,17 @@
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="../../assets/vendor/libs/fullcalendar/fullcalendar.js"></script>
-<script src="../../assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
-<script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
-<script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
-<script src="../../assets/vendor/libs/select2/select2.js"></script>
-<script src="../../assets/vendor/libs/flatpickr/flatpickr.js"></script>
-<script src="../../assets/vendor/libs/moment/moment.js"></script>
+  <script src="../../assets/vendor/libs/autosize/autosize.js"></script>
+<script src="../../assets/vendor/libs/cleavejs/cleave.js"></script>
+<script src="../../assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+<script src="../../assets/vendor/libs/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+<script src="../../assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
 
   <!-- Main JS -->
   <script src="../../assets/js/main.js"></script>
 
   <!-- Page JS -->
-  <script src="../../assets/js/app-calendar-events.js"></script>
-<script src="../../assets/js/app-calendar.js"></script>
+  <script src="../../assets/js/forms-extras.js"></script>
   
 </body>
 

@@ -133,7 +133,7 @@
   
   <ul class="menu-inner py-1">
     <!-- Dashboards -->
-      <li class="menu-item active open">
+    <li class="menu-item active open">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-home-circle"></i>
         <div data-i18n="Dashboards">Dashboards</div>
@@ -141,13 +141,23 @@
       <ul class="menu-sub">
         <li class="menu-item active">
           <a href="criarUsuario.html" class="menu-link">
-            <div data-i18n="Criar usuário">Criar usuário</div>
+            <div data-i18n="Criar usuário">Administrador</div>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="Medico.html" class="menu-link">
+            <div data-i18n="Criar usuário">Médico</div>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="Paciente.html" class="menu-link">
+            <div data-i18n="Criar usuário">Paciente</div>
           </a>
         </li>
         <li class="menu-item active">
           <a href="agendarConsulta.html" class="menu-link">
             <i class="menu-icon tf-icons bx bx-calendar"></i>
-            <div data-i18n="Agendar consulta">Agendar consulta</div>
+            <div data-i18n="Calendar">Agendar consulta</div>
           </a>
         </li>
         <li class="menu-item">
@@ -157,7 +167,6 @@
         </li>
       </ul>
     </li>
-    
   </ul>
   
   
@@ -291,7 +300,12 @@
               <div class="row">
                 <div class="mb-3 col-lg-6 col-xl-3 col-12 mb-0">
                   <label class="form-label" for="form-repeater-1-1">Medico</label>
-                  <input type="text" id="form-repeater-1-1" class="form-control" placeholder="john.doe" />
+                    <select id="defaultSelect" class="form-select">
+                      <option>MEDICO</option>
+                      <option value="1">CLÍNICO GERAL</option>
+                      <option value="2">PSICOLOGO</option>
+                      <option value="3">PEDIATRA</option>
+                    </select>
                 </div>
                 <div class="mb-3 col-lg-6 col-xl-3 col-12 mb-0">
                   <label class="form-label" for="form-repeater-1-2">Horario</label>
@@ -299,7 +313,12 @@
                 </div>
                 <div class="mb-3 col-lg-6 col-xl-2 col-12 mb-0">
                   <label class="form-label" for="form-repeater-1-4">Paciente</label>
-                  <input type="text" id="form-repeater-1-2" class="form-control" placeholder="Paciente" />
+                  <select id="defaultSelect" class="form-select">
+                    <option>PACIENTE</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
                 <div class="mb-3 col-lg-12 col-xl-2 col-12 d-flex align-items-center mb-0">
                   <button class="btn btn-label-danger mt-4" data-repeater-delete>

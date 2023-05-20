@@ -9,6 +9,19 @@
 #SENHA{
     width: 200%;
 }
+
+#CPF{
+    width: 200%;
+}
+
+#NASCIMENTO{
+    width: 200%;
+}
+
+#ENDERECO{
+    width: 200%;
+}
+
 #Especialidade{
     width: 200%;
 }
@@ -31,7 +44,7 @@
 }
 
 #Medico{
-    width: 50%;
+    width: 200%;
     position: relative;
 }
 
